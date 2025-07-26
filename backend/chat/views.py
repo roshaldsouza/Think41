@@ -22,3 +22,4 @@ def chat_api(request):
             for m in messages
         ]
         return JsonResponse(data, safe=False)
+  return JsonResponse({"error": "Only POST allowed"}, status=405)
